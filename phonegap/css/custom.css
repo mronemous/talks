@@ -1,0 +1,16 @@
+.reveal .slides {
+  /* Force to take up whole screen. */
+  width: 95% !important;
+  height: 100% !important;
+}
+
+.reveal pre code {
+  font-size: 95%;
+  max-height: 450px;
+}
+
+.reveal .logo {
+    float: right;
+    margin: 2%;
+    width: 20%;
+}

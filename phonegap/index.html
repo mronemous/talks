@@ -1,0 +1,610 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>reveal.js - The HTML Presentation Framework</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/simple.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+        <link rel="stylesheet" href="css/custom.css">
+
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+            <img src="assets/bluefletch.png" class="logo"/>
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+                <section>
+    				<section>
+    					<h1>PhoneGap</h1>
+    					<h3>Lego NXT Robot Project</h3>
+                        <p>
+    						<small>Matthew Ronemous</small><br/>
+                            <small>Software Architect</small>
+    					</p>
+
+                        <aside class="notes"><pre>
+Hi I'm Matthew Ronemous.
+I work at BF Mobile as a Software Architect.
+We specialize in delivering mobile solutions to companies in the ATL area.
+Mobile ~ rugged inventory management devices, wearables, sensors, or robots.
+                        </pre></aside>
+    				</section>
+                    <section>
+                        <h2>Meet Johnny</h2>
+                        <br/>
+                        <ul>
+                            <li class="fragment">Sonar Front / Back</li>
+                            <li class="fragment">Compass</li>
+                            <li class="fragment">Camera Lift</li>
+                        </ul>
+
+                        <aside class="notes"><pre>
+                       Camera not implemented.
+                        </pre></aside>
+                    </section>
+
+                    <section>
+                        <h2>Name this tune</p>
+                        <p class="fragment">Mary had a little lamb</p>
+                       <aside class="notes"><pre>
+                       Demo movement + sensors.
+                        </pre></aside>
+                    </section>
+
+                    <section>
+
+                    </section>
+
+                </section>
+
+                <section>
+
+                    <section>
+                        <h1>History</h1>
+                    </section>
+
+                    <section id="fragments">
+                        <p class="fragment">Nitobi - iPhoneDevCamp San Francisco 2009</p>
+                        <p class="fragment">Purchased by Adobe 2011</p>
+                        <p class="fragment">Donated to Apache as Cordova 2011</p>
+                    </section>
+
+                    <section>
+                        <h3>Cordova -> Phonegap = Webkit -> Chrome</h3>
+
+                        <aside class="notes"><pre>
+                        Cordova is opensource
+                        Phonegap is commercial
+                        </pre></aside>
+                    </section>
+
+                    <section>
+                        <h3>Phonegap adds cloud build support to cordova</h3>
+                    </section>
+
+                    <section>
+                        <h2>Random Trivia</h2>
+                        <p class="fragment">Where did the name "Cordova" come from?</p>
+                        <p class="fragment">Cordova Street was near Nitobi office</p>
+                        <!--
+                        <p class="fragment">What was the original name Apache used?</p>
+                        <p class="fragment">Apache Callback</p>
+                        -->
+
+                        <aside class="notes"><pre>
+                        Impress your coworkers!
+                        </pre></aside>
+                    </section>
+
+                </section>
+
+                <section>
+                    <section>
+                        <h2>What is PhoneGap?</h2>
+                        <img src="assets/Phonegap-Logo-Simple.png" style="border:none; background: none; box-shadow:none; -webkit-box-shadow:none; padding: 0px; margin-top:-30px;" />
+                    </section>
+
+                    <section>
+                        <h3>Build your UI with HTML5</h3>
+                        <img src="assets/phonegap%20web%20view.png" style="border:none; background: none; box-shadow:none; -webkit-box-shadow:none; padding: 15px; vertical-align: top;" />
+                        <h4>Native Web View</h4>
+
+                        <aside class="notes"><pre>
+Phonegap wraps your HTML5 app in native code.
+The native code renders your HTML5 app within a webview.
+                        </pre></aside>
+                    </section>
+
+                    <section>
+                        <h3>Access native functionality through PhoneGap</h3>
+                        <img src="assets/phonegap%20api.png" style="border:none; background: none; box-shadow:none; -webkit-box-shadow:none; padding: 15px; vertical-align: top;" />
+
+                        <aside class="notes"><pre>
+Phonegap acts as a bridge to native APIs via plugins.
+                        </pre></aside>
+                    </section>
+                </section>
+
+                <section>
+                    <section>
+                        <h1>Creating Phonegap Apps</h1>
+                    </section>
+                    <section>
+                        <h4>Cordova CLI</h4>
+                        <pre><code>$ cordova create hello com.example.hello HelloWorld && cd hello
+$ cordova platform add ios
+$ cordova platform add android
+$ cordova plugin add org.apache.cordova.device</code></pre>
+                        <h4>File Structure</h4>
+                        <pre>
+merges
+    android
+    ios
+platforms
+    android
+    ios
+plugins
+www
+    config.xml</pre>
+
+                        <aside class="notes"><pre>
+go though commands
+go through folder structure.
+                        </pre></aside>
+                    </section>
+                </section>
+
+                <section>
+                    <section>
+                        <h1>Debugging Phonegap Apps</h1>
+                    </section>
+
+                    <section>
+                        <h2><a href="https://www.google.com/intl/en/chrome/browser/" target="_blank">Desktop</a></h2>
+                        <img src="assets/chrome_Debug.png" style="border:none; background: none; box-shadow:none; -webkit-box-shadow:none; vertical-align: middle;" />
+                        <p>Safari, FireFox, and IE have similar developer tools</p>
+
+                        <aside class="notes"><pre>
+HTML5 - standard browser dev tools can get used.
+However many plugins do not work in the browser (cordova isn't actually running).
+                        </pre></aside>
+                    </section>
+                    <section>
+                        <h2><a href="http://emulate.phonegap.com/" target="_blank">Ripple Emulator</a></h2>
+                        <img src="assets/eumlator-chrome-small.png" style="border:none; background: none; box-shadow:none; -webkit-box-shadow:none; vertical-align: middle;" />
+                        <pre>
+                        $npm install -g ripple-emulator
+                        ripple emulate --path platforms/android/assets/www
+                        </pre>
+
+                        <aside class="notes"><pre>
+Attempts to simulate cordova running in the browser.
+Some plugins will work and others can be passed simulated data (geo location, accelorometer).
+                        </pre></aside>
+                    </section>
+                    <section>
+                        <h2>Remote Debugging</h2>
+                        <h4><a href="https://developers.google.com/chrome-developer-tools/docs/remote-debugging#remote-debugging-overview" target="_blank">developers.google.com</a></h4>
+                        <img src="assets/platforms/Android_robot.png" style="border:none; background: none; box-shadow:none; -webkit-box-shadow:none; vertical-align: middle;" />
+                        <h4><a href="http://moduscreate.com/enable-remote-web-inspector-in-ios-6/" target="_blank">moduscreate.com</a></h4>
+                        <img src="assets/platforms/Apple_iOS.png" style="border:none; background: none; box-shadow:none; -webkit-box-shadow:none; vertical-align: middle;" />
+
+                        <h4><a href="http://people.apache.org/~pmuellr/weinre/docs/latest">Weinre</a></h4>
+                        <img src="assets/weinre-icon-128x128.png" style="border:none; background: none; box-shadow:none; -webkit-box-shadow:none; vertical-align: middle;" />
+
+                        <aside class="notes"><pre>
+IOS has had excellent support for remote debugging.
+Recently remote debugging has gotten alot easier on android 4.4+.
+For 4.4- weinre can still be useful.
+                        </pre></aside>
+                    </section>
+
+                </section>
+
+                <section>
+                    <section>
+                        <h1>Creating Custom Plugins</h1>
+                    </section>
+
+                    <section>
+                        <h6>config.xml</h6>
+                        <pre><code><platform name="android"><feature name="BluetoothSerial"> //id
+    <param name="android-package" value="com.megster.cordova.BluetoothSerial" />
+</feature></code></pre>
+
+                        <h6>Javascript</h6>
+                        <pre><code>                                id                 action   parameters
+cordova.exec( success, failure, "BluetoothSerial", "write", [data] )</code></pre>
+
+                        <h6>Java</h6>
+                        <pre><code>package com.megster.cordova;
+public class BluetoothSerial extends CordovaPlugin {
+
+    private static final String WRITE = "write";
+    @Override
+    public boolean execute(String action, CordovaArgs args, CallbackContext callbackContext) throws JSONException {
+        if (action.equals(WRITE)) {
+            String data = args.getString(0);
+            bluetoothSerialService.write(data.getBytes());
+            callbackContext.success();
+        }
+        ...
+    }
+}</code></pre>
+
+                    <aside class="notes"><pre>
+config.xml for each platform.
+javascript common interface for all platforms.
+Show link between config.id -> js.id -> java.package
+Show link between action and parameters in java.
+                    </pre></aside>
+
+                    </section>
+
+                    <section>
+                        <h2>plugin.xml</h2>
+                        <pre><code><plugin id="com.megster.cordova.BluetoothSerial" version="0.2.1">
+    <js-module src="www/bluetoothSerial.js" name="bluetoothSerial"> //js interface
+        <clobbers target="bluetoothSerial" ></clobbers>
+    </js-module>
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/widget">
+            <feature name="BluetoothSerial"> //id
+                <param name="android-package" value="com.megster.cordova.BluetoothSerial"/> //native package
+            </feature>
+        </config-file>
+        //Files to copy into native project
+        <source-file src="src/android/com/megster/cordova/BluetoothSerial.java" target-dir="src/com/megster/cordova"></source-file>
+        <source-file src="src/android/com/megster/cordova/BluetoothSerialService.java" target-dir="src/com/megster/cordova"></source-file>
+        //Settings to set in native project
+        <config-file target="AndroidManifest.xml" parent="/manifest">
+            <uses-permission android:name="android.permission.BLUETOOTH" ></uses-permission>
+            <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" ></uses-permission>
+        </config-file>
+    </platform>
+</plugin></code></pre>
+
+
+                    <aside class="notes"><pre>
+File tells cordova what to do when importing plugin.
+    where to inject the javascript interface (window.[clobbers]).
+    changes to config.xml
+    files to copy
+    platform settings to set ( androidManifest )
+                    </pre></aside>
+                    </section>
+
+                    <section>
+                        <h2>Publish Plugin</h2>
+                        <pre>
+docs
+plugin.xml
+src
+    android
+        BluetoothSerial.java
+        BluetoothSerialService.java
+www
+    bluetoothSerial.js
+                        </pre>
+                        <h4><a href="http://plugins.cordova.io/" target="_blank">cordova.io</a></h4>
+
+                    <aside class="notes"><pre>
+Package into standard file structure.
+    deploy with git or submit to the plugin registry - cordova.io
+                    </pre></aside>
+                    </section>
+                </section>
+
+                <!-- About the lego nxt project -->
+                <section>
+                    <section>
+                        <h2>Why?</h2>
+                        <div>
+<img src="assets/kids.jpg" style="border:none; background: none; box-shadow:none; -webkit-box-shadow:none; padding: 0px; width:25%;" />
+                        </div>
+                        <ul>
+                            <li class="fragment">Teach my kids programming</li>
+                            <li class="fragment">Learn new technologies</li>
+                            <li class="fragment">Share PhoneGap knowledge with community</li>
+                            <li class="fragment">Robot!</li>
+                        </ul>
+
+                    <aside class="notes"><pre>
+API provides simple interface with low barrier to entry.
+                    </pre></aside>
+
+                    </section>
+                    <section>
+                        <h2>Tech Stack</h2>
+                        <ul>
+                            <li class="fragment">Yeomen</li>
+                            <li class="fragment">Bower / Npm</li>
+                            <li class="fragment">Grunt</li>
+                            <li class="fragment">Angular + Bootstrap</li>
+                            <li class="fragment">Typescript</li>
+                            <li class="fragment">Cordova</li>
+                        </ul>
+
+                    <aside class="notes"><pre>
+Yeomen = inital app template (angularjs generator)
+Bower / NPM = client and node dependancy management.
+Grunt = Build + development tools.
+Angular + Bootstrap = Presentation
+Typescript = ALT JS for complex OO parts.
+Cordova = Enables app to run on Android, and access hardware.
+                    </pre></aside>
+                    </section>
+
+                    <section>
+                    <h3>Grunt Power!</h3>
+                    <div>
+                    <img src="assets/lego-batman.jpg" style="border:none; background: none; box-shadow:none; -webkit-box-shadow:none; width:30%;" />
+                    </div>
+                    <ul>
+                        <li class="fragment">Windows + Mac</li>
+                        <li class="fragment">Asset minification / bundling</li>
+                        <li class="fragment">ATL JS/CSS watch compiler</li>
+                        <li class="fragment">Local webserver</li>
+                        <li class="fragment">Js hint</li>
+                        <li class="fragment">Auto-testing</li>
+                        <li class="fragment">Cordova build</li>
+                    </ul>
+
+                    <aside class="notes"><pre>
+Ultimate utility belt.
+Bullets.
+If you have not used it check it out!
+                    </pre></aside>
+
+                    </section>
+
+                    <section>
+                    <h2>Architecture</h2>
+                    <br/>
+                    <div>
+                    <img src="assets/architecture.png" style="border:none; background: none; box-shadow:none; -webkit-box-shadow:none; padding-left: 10%; margin-top: -15px; width:55%;" />
+                    </div>
+                    </section>
+
+                    <section>
+                        <h2>Bluetooth Serial Plugin</h2>
+<br/>
+<h5>API</h5>
+<pre><code>connect(macAddress, success, failure)
+disconnect(success, failure)
+read(success, failure)
+write(data, success, failure)
+...
+</code></pre>
+<h6>Author: Don Coleman</h6>
+
+                    <aside class="notes"><pre>
+LEGO API====
+
+Conntection.ts
+  namespacing
+  ambient declaration (window)
+  class
+  constructor
+  interface
+  bluetoothSerial
+
+Brick.ts
+ getter / setter
+
+Motor.ts
+ statics
+
+Sensor.ts -> I2cSensor.ts -> SonarSensor.ts
+  () => {} = lexical scope control
+  inheritance
+
+MODEL====
+
+Robot.ts
+     constructor
+     movement
+     sensor code
+     sing
+
+ES6 like functionality now.
+You can use ALT JS for all or part of your project!
+                    </pre></aside>
+
+                    </section>
+
+                    <section>
+                        <h2>Accelorometer Plugin</h2>
+<br/>
+<h5>API</h5>
+<pre><code>watchId = watchAcceleration(success, failure, options = { frequency: 500 })
+clearWatch(watchId)
+...
+</code></pre>
+<h6>Author: Cordova</h6>
+
+                         <aside class="notes"><pre>
+Show tilt control.
+
+$scope.toggleTilt
+$scope.tiltCreate
+                        </pre></aside>
+                    </section>
+
+                     <section>
+                        <h2>Speech to Text Plugin</h2>
+<br/>
+<h5>API</h5>
+<pre><code>recognition = new SpeechRecognition()
+recognition.start()
+
+recognition.onresult = function(event)
+recognition.onerror = function()
+
+recognition.stop()
+...
+</code></pre>
+<h6>Author: Simon MacDonald</h6>
+
+                       <aside class="notes"><pre>
+Show speech control.
+
+$scope.toggleVoice
+$scope.voiceCreate
+                        </pre></aside>
+
+                    </section>
+
+                </section>
+
+                <section>
+                    <section>
+                        <img src="assets/robotsconf2013.png" style="width:50%; border:none; background: none; box-shadow:none; -webkit-box-shadow:none; vertical-align: middle;" />
+                        <img src="assets/robotsconf2013-group.jpg" style="border:none; background: none; box-shadow:none; -webkit-box-shadow:none; vertical-align: middle;" />
+
+                       <aside class="notes"><pre>
+December
+                        </pre></aside>
+                    </section>
+
+                    <section>
+                        <h2>Arduino Hack</h2>
+                        <ul>
+                            <li class="fragment">Build from stock parts</li>
+                            <li class="fragment">Soldering practice</li>
+                            <li class="fragment">Electrical circuit design</li>
+                            <li class="fragment">Controlled by <a href="https://github.com/rwaldron/johnny-five">Johnny Five NodeJs API</a></li>
+                        </ul>
+                        <div>
+<img src="assets/arduino-hack.jpg" style="border:none; background: none; box-shadow:none; -webkit-box-shadow:none; vertical-align: middle; width:25%;" />
+                        </div>
+                    </section>
+
+                    <section>
+                        <h2>Cool Things</h2>
+                        <ul>
+                            <li class="fragment"><a href="http://www.chaoticmoon.com/case-studies/board-of-awesomeness/">Board of Awesome</a></li>
+                            <li class="fragment"><a href="http://news.cnet.com/8301-17938_105-57383717-1/brainwave-controlled-skateboard-is-totally-mental/">Board of Imagination</a></li>
+                            <li class="fragment"><a href="http://www.youtube.com/embed/16GiO8EEVpE">Smart Shopping Cart</a></li>
+                            <li class="fragment"><a href="http://player.vimeo.com/video/57248461">Scream Lights</a></li>
+                            <li class="fragment"><a href="http://newamericanpublicart.com/colorcommons/">Color Commons</a></li>
+                        </ul>
+
+                    </section>
+                </section>
+
+                <section>
+                    <h2>NodeJs Rover (Next Project)</h2>
+                    <div>
+                    <img src="assets/nodejs-project.jpg" style="border:none; background: none; box-shadow:none; -webkit-box-shadow:none; padding: 0px; width:25%;" />
+                    </div>
+                    <ul>
+                        <li>Raspberry Pi + Arduino</li>
+                        <li>Camera + Sonar + GPS</li>
+                        <li>Johnny Five</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <img src="assets/matthew_ronemous.png" style="float:left" />
+                    <h2>Matthew Ronemous</h2>
+                    <h3>Software Architect</h3>
+                    <p >
+                    <ul>
+                        <li style="background:url('assets/envelope@2x.png') no-repeat left center; padding-bottom:15px; padding-top:5px; padding-left: 60px; display:block;"><a href="mailto:matthew.ronemous@bluefletch.com" target="_blank">matthew.ronemous@bluefletch.com</a></li>
+                        <li style="background:url('assets/globe@2x.png') no-repeat left center; padding-bottom:15px; padding-top:5px; padding-left: 60px; display:block;"><a href="http://www.ronemous.com" target="_blank">ronemous.com</a></li>
+                        <li style="background:url('assets/twitter@2x.png') no-repeat left center; padding-bottom:15px; padding-top:5px; padding-left: 60px; display:block;"><a href="http://twitter.com/mronemous" target="_blank">@mronemous</a></li>
+                        <li style="background:url('assets/github.png') no-repeat left center; padding-bottom:15px; padding-top:5px; padding-left: 60px; display:block;"><a href="http://github.com/mronemous" target="_blank">github.com/mronemous</a></li>
+
+                    </ul>
+                    </p>
+                </section>
+
+                <section>
+                    <h2>References</h2>
+                    <a href="http://www.tricedesigns.com">Andrew Trice</a>
+                    <br/><a href="http://devgirl.org">Dev Girl</a>
+                    <br/><a href="http://cordova.apache.org/docs/en/edge/guide_cli_index.md.html#The%20Command-Line%20Interface" target="_blank">cordova.apache.org/docs</a>
+                    <br/><a href="http://devgirl.org/2013/09/17/how-to-write-a-phonegap-3-0-plugin-for-android/" target="_blank">Creating Custom Plugins</a>
+                    <br/><a href="http://www.raymondcamden.com">Ray Camden</a>
+                    <br/><a href="http://www.monobrick.dk">Mono Brick</a>
+                    <br/><a href="http://www.robotappstore.com/Knowledge-Base/Programming-LEGO-NXT-Mindstorms/92.html">Robot App Store</a>
+                    <br/><a href="https://github.com/don/BluetoothSerial">Bluetooth Serial Plugin</a>
+                    <br/><a href="https://github.com/macdonst/SpeechRecognitionPlugin">Speech to Text Plugin</a>
+
+                </section>
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Parallax scrolling
+				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+				// parallaxBackgroundSize: '2100px 900px',
+
+                /*
+                multiplex: {
+                      id: 'e2bc6e79f19fbe63',
+                      secret: '13661966883862075064',
+                      url: 'revealjs.jit.su:80'
+                },
+                */
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }/*,
+                    { src: 'socket.io/socket.io.js', async: true},
+                    { src: 'plugin/notes/notes-server/client.js', async: true }*/
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
