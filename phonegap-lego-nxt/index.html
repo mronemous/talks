@@ -583,13 +583,6 @@ December
 				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
 				// parallaxBackgroundSize: '2100px 900px',
 
-                /*
-                multiplex: {
-                      id: 'e2bc6e79f19fbe63',
-                      secret: '13661966883862075064',
-                      url: 'revealjs.jit.su:80'
-                },
-                */
 
 				// Optional libraries used to extend on reveal.js
 				dependencies: [
@@ -598,9 +591,7 @@ December
 					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
 					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
 					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
-					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }/*,
-                    { src: 'socket.io/socket.io.js', async: true},
-                    { src: 'plugin/notes/notes-server/client.js', async: true }*/
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
 				]
 			});
 
